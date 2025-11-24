@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const downloadBtns = document.querySelectorAll(".downloadCV");
-    const filePath = "assets/pdf/Krishna_DevOps_Software_Engineer_3.4 Exp_Resume_krishnakumar.2015123@gmail.com.pdf";
-    const fileName = "Krishna_Kumar_M_CV.pdf";
+    const filePath = "assets/pdf/Krishna_DevOps_Software_Engineer_Resume.pdf";
+    const fileName = "Krishna_DevOps_Software_Engineer_3.4 Exp_Resume_krishnakumar.2015123@gmail.com.pdf";
 
     downloadBtns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
