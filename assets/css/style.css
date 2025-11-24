@@ -1000,6 +1000,22 @@ footer {
   object-fit: contain;
 }
 
+/* New style block to make the content area scrollable */
+#modal-body {
+    /* Set a maximum height slightly smaller than the modal-content itself, 
+       to account for padding and the close button. */
+    max-height: calc(90vh - 40px); /* Adjust based on modal-content padding (20px top + 20px bottom) */
+    overflow-y: auto; /* Force the scrollbar on the inner content */
+    padding-top: 5px;
+}
+
+/* Ensure images inside the scrollable area are fully responsive */
+#modal-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
 
 @keyframes popout {
   from { transform: scale(0.7); opacity: 0; }
