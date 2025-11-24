@@ -132,7 +132,25 @@
                 <a href="https://www.linkedin.com/in/krishna-kumar-35ba771b3" target="_blank" class="icon nav-link"><i class="uil uil-linkedin-alt"></i></a>
                 <a href="http://Behance.net/krishnakumar203" target="_blank" class="icon nav-link"><i class="uil uil-behance"></i></a>
                 <a href="https://www.instagram.com/heartlykrishna/" target="_blank" class="icon nav-link"><i class="uil uil-instagram"></i></a>
-                <a href="https://youtube.com/channel/UC63AiCg6IngBqtKFEvIphCA" target="_blank" class="icon nav-link"><i class="uil uil-youtube"></i></a>
+                <a href="#" id="openTwoLinksButton" class="icon nav-link"> <i class="uil uil-youtube"></i></a>
+
+<script>
+    document.getElementById('openTwoLinksButton').addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        const link1 = "https://youtube.com/channel/UC63AiCg6IngBqtKFEvIphCA";
+        const link2 = "https://www.youtube.com/channel/UCNTO27wuyXBbWF4IcuP9Q1Q";
+        window.open(link1, '_blank'); 
+        const a = document.createElement('a');
+        a.href = link2;
+        a.target = '_blank';
+        a.style.display = 'none'; 
+        document.body.appendChild(a);
+        a.click(); 
+        document.body.removeChild(a);   
+        console.log("Attempted to open two tabs using anchor tag trick.");
+    });
+</script>
                 <a href="http://github.com/krishnakumarkrish" target="_blank" class="icon nav-link"><i class="uil uil-github-alt"></i></a>
         </div>
         <div class="bottom-footer">
