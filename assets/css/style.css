@@ -616,7 +616,7 @@ li{
   align-items: center;
   flex-direction: column;
   width: 30%;
-  height: 400px;
+  height: 450px;
   background: var(--color-white);
   border-radius: 20px;
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
@@ -643,7 +643,7 @@ li{
 .school-image-wrapper {
     position: relative;
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     margin: 15px auto 0;
     overflow: hidden;
     border-radius: 10px;
@@ -680,7 +680,7 @@ li{
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none;
+    pointer-events: auto !important;
 }
 
 
