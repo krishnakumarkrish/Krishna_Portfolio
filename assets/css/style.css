@@ -325,13 +325,16 @@ nav {
 .top-header span {
   color: #999;
 }
+
+/* ----- ABOUT INFO START ----- */
+
 .about-title {
   font-size: 20px;
   font-weight: 600;
   color: var(--text-color-second);
   margin-bottom: 15px;
 }
-/* ----- ABOUT INFO ----- */
+
 .about-info{
   position: relative;
   display: flex;
@@ -376,7 +379,11 @@ nav {
   background: var(--first-color-hover);
 }
 
-/* ----- ABOUT / SKILLS BOX ----- */
+/* ----- ABOUT INFO END ----- */
+
+
+/* ----- ABOUT / SKILLS BOX START ----- */
+
 .skills-box {
   margin: 10px;
 }
@@ -396,8 +403,10 @@ nav {
   border-radius: 5px;
 }
 
+/* ----- ABOUT / SKILLS BOX END ----- */
 
-/* ----- PROJECTS BOX ----- */
+/* ----- PROJECTS BOX START ----- */
+
 .header {
   background-color: white;
   border: 1px solid black;
@@ -469,7 +478,7 @@ td{
   .featured-name {
     font-size: 40px;
   }
-  .project-box {
+ -- .project-box {
     width: 100%;
   }
   .form-inputs {
@@ -618,7 +627,10 @@ li{
   margin-left: 10%;
 }
 
-/* ----- EDUCTION BOX ----- */
+/* ----- PROJECTS BOX END ----- */
+
+/* ----- EDUCTION BOX START ----- */
+
 .eduction-container {
   display: flex;
   width: 100%;
@@ -676,7 +688,10 @@ li{
   z-index: 2;
 }
 
-/* ----- CONTACT BOX ----- */
+/* ----- EDUCTION BOX END ----- */
+
+/* ----- CONTACT BOX START ----- */
+
 .contact-info {
   position: relative;
   display: flex;
@@ -933,40 +948,6 @@ footer {
   }
 }
 
-/* ----- Gallery BOX ----- */
-/* .image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.image-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-.image-item img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-.image-item p {
-  margin: 5px 0;
-}
-
-.image-item a {
-  display: inline-block;
-  padding: 8px 15px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-} */
-
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1133,25 +1114,6 @@ footer {
   color: #007bff; /* hover effect */
 }
 
-/* Responsive layout for smaller screens */
-/* @media (max-width: 768px) {
-    .footer-menu {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .footer_menu_list {
-      width: 100%;
-      text-align: center;
-    }
-  
-    .footer_menu_list .nav-link {
-      display: inline-block;
-      padding: 10px 0;
-    }
-  } */
-
 @media screen and (max-width: 768px) and (max-height: 992px) {
   .footer-menu {
     /* flex-direction: column; */
@@ -1268,6 +1230,114 @@ footer {
     align-items: center;
   }
 }
+
+/* education section starts */
+.education {
+  background: #e5ecfb;
+  min-height: 80vh;
+}
+.education .qoute {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.education .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.education .box-container .box {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+  transition: 0.3s;
+  background: rgb(252, 252, 252);
+}
+.education .box-container .box:hover {
+  transform: scale(1.03);
+  box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+.education .box-container .box .image {
+  flex: 1 1 20rem;
+  width: 100%;
+}
+.education .box-container .box img {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.education .box-container .box .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  flex: 1 1 70rem;
+}
+.education .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: #012970;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 1rem;
+}
+.education .box-container .box .content p {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+.education h4 {
+  font-size: 2rem;
+  color: rgb(34, 109, 0);
+  text-align: left;
+  margin: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+
+/* education media queries starts*/
+@media screen and (max-width: 600px) {
+  .education .box-container .box {
+    flex-direction: column;
+    width: 100%;
+  }
+  .education .box-container .box .image {
+    width: 100%;
+    height: 25rem;
+  }
+  .education .box-container .box img {
+    width: 100%;
+  }
+  .education .box-container .box .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex: 0;
+  }
+  .education .btns {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-wrap: wrap;
+  }
+}
+/* education media queries ends*/
+/* education section ends */
+
 
 .contact-info {
   padding: 20px;
