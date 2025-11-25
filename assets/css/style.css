@@ -608,6 +608,7 @@ li{
   flex-wrap: wrap;
 }
 
+/* --- Modified from your existing CSS --- */
 .eduction-box {
   position: relative;
   display: flex;
@@ -615,12 +616,85 @@ li{
   align-items: center;
   flex-direction: column;
   width: 30%;
-  height: 250px;
+  height: 400px;
   background: var(--color-white);
   border-radius: 20px;
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
 }
+
+/* --- FIXES FOR EDUCATION BOX LAYOUT --- */
+.eduction-box p {
+    /* Styles for the new <p> tags containing scores/school names */
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 5px; 
+    text-align: center; /* Ensure text is centered inside the box */
+}
+
+/* Ensure original <label> style is removed for consistency if you still use it elsewhere */
+.eduction-box label {
+  font-size: 15px;
+  color: #777;
+  /* Removed: display: block; margin-bottom: 0.25rem; */
+}
+
+/* --- CREATIVE IMAGE STYLING --- */
+.school-image-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 15px auto 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.school-image-wrapper:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.school-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.school-image-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--color-white);
+    padding: 6px 5px;
+    font-size: 0.8rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+
+.school-image-wrapper:hover .image-caption {
+    opacity: 1;
+}
+
+/* For smaller screens (below 900px, where boxes stack) */
+@media only screen and (max-width: 900px) {
+    .school-image-wrapper {
+        max-width: 250px;
+    }
+}
+
 
 .eduction-box > i {
   font-size: 50px;
@@ -656,6 +730,7 @@ li{
   color: var(--color-white);
   z-index: 2;
 }
+
 
 /* ----- EDUCTION BOX END ----- */
 
@@ -1168,6 +1243,7 @@ footer {
   transition: transform 0.3s ease;
 }
 
+
 .eduction-box:hover {
   transform: translateY(-5px);
 }
@@ -1533,3 +1609,4 @@ footer {
   }
   
 }
+
