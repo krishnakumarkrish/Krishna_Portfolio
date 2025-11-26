@@ -875,6 +875,10 @@ footer {
   display: flex;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .bottom-footer p{
   text-decoration: none;
   width: 100%;
