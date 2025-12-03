@@ -1479,6 +1479,36 @@ footer {
   }
 }
 
+/* ---------- or ---------- || Start */
+
+.separator-container {
+    /* To align the line and text horizontally */
+    display: flex; 
+    align-items: center;
+    /* Adjust spacing as needed */
+    margin: 20px 0; 
+    font-family: sans-serif; /* For better text readability */
+    color: #666; /* Adjust color as needed */
+    font-size: 16px;
+}
+
+.line {
+    /* Flex-grow allows the lines to take up the available space */
+    flex-grow: 1; 
+    /* The style for the line itself */
+    border-bottom: 2px dashed #ccc; /* Adjust to solid or dashed, and change color/thickness */
+    height: 1px; /* To ensure the border is the line */
+    margin: 0 30px; /* Space between the line and the 'or' text */
+}
+
+.text {
+    /* Optional: To make the 'or' text stand out */
+    padding: 0 5px; 
+    font-weight: bold;
+}
+
+/* ---------- or ---------- || End */
+
 @media screen and (max-width: 448px){
   .image-grid {
     display: grid;
