@@ -1,3 +1,3 @@
 # Krishna_Portfolio
 
-Portfolio Link : https://github.com/krishnakumarkrish/Krishna_Portfolio
+Portfolio Link : https://krishnakumarkrish.github.io/Krishna_Portfolio/
